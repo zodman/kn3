@@ -4,6 +4,11 @@ import json
 import os
 
 class Kn3(object):
+
+    @staticmethod
+    def mirror(url):
+        return Kn3.import_to_kn3(url)
+
     @staticmethod
     def import_to_kn3(url, logo=False):
         request = requests.get(url, stream=True)
